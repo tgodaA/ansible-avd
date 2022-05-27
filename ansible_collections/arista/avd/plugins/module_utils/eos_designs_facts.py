@@ -1288,7 +1288,7 @@ class EosDesignsFacts:
                        required=True,
                        org_key=f"avd_switch_facts.({self.mlag_peer}).switch.id",
                        separator="..")
-    
+
     @cached_property
     def mlag_switch_ids(self):
         '''
