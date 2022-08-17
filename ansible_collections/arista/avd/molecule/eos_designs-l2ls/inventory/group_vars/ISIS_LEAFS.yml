@@ -4,12 +4,8 @@ type: leaf
 
 leaf:
   defaults:
-    loopback_ipv4_pool: 192.168.255.0/24
-    loopback_ipv4_offset: 4
-    vtep_loopback_ipv4_pool: 192.168.254.0/24
     uplink_interfaces: ['Ethernet1']
     uplink_switches: ['ISIS-SPINE1']
-    uplink_ipv4_pool: 172.31.255.0/24
     isis_system_id_prefix: '0001.0001'
     isis_maximum_paths: 4
     platform: vEOS-LAB

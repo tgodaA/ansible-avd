@@ -35,14 +35,6 @@ ethernet_interfaces:
     channel_group:
       id: 1
       mode: active
-  Ethernet10:
-    peer: Endpoint
-    peer_type: network_port
-    description: Endpoint
-    type: switched
-    shutdown: false
-    mode: access
-    vlans: 110
 port_channel_interfaces:
   Port-Channel1:
     description: ISIS-SPINE1_Po1

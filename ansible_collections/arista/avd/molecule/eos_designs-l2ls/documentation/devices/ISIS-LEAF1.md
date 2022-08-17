@@ -130,7 +130,6 @@ vlan 110
 | Interface | Description | Mode | VLANs | Native VLAN | Trunk Group | Channel-Group |
 | --------- | ----------- | ---- | ----- | ----------- | ----------- | ------------- |
 | Ethernet1 | ISIS-SPINE1_Ethernet1 | *trunk | *110 | *- | *- | 1 |
-| Ethernet10 |  Endpoint | access | 110 | - | - | - |
 
 *Inherited from Port-Channel Interface
 
@@ -142,13 +141,6 @@ interface Ethernet1
    description ISIS-SPINE1_Ethernet1
    no shutdown
    channel-group 1 mode active
-!
-interface Ethernet10
-   description Endpoint
-   no shutdown
-   switchport access vlan 110
-   switchport mode access
-   switchport
 ```
 
 ## Port-Channel Interfaces

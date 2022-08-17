@@ -17,11 +17,11 @@ tenants:
         static_routes: # Testing creation of static route in default VRF including redistribute static under the underlay protocol
           - destination_address_prefix: 10.1.0.0/16
             gateway: 10.1.100.100
-            nodes: [ ISIS-LEAF1 ]
+            nodes: [ ISIS-SPINE1 ]
 
 network_ports:
   - switches:
-      - "ISIS-LEAF[1]"
+      - "ISIS-SPINE[1]"
     switch_ports:
       - "Ethernet10"
     vlans: 110

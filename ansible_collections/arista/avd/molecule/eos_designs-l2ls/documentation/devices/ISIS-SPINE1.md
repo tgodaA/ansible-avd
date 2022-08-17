@@ -134,6 +134,7 @@ vlan 110
 | Interface | Description | Mode | VLANs | Native VLAN | Trunk Group | Channel-Group |
 | --------- | ----------- | ---- | ----- | ----------- | ----------- | ------------- |
 | Ethernet1 | ISIS-LEAF1_Ethernet1 | *trunk | *110 | *- | *- | 1 |
+| Ethernet10 |  Endpoint | access | 110 | - | - | - |
 
 *Inherited from Port-Channel Interface
 
@@ -145,6 +146,13 @@ interface Ethernet1
    description ISIS-LEAF1_Ethernet1
    no shutdown
    channel-group 1 mode active
+!
+interface Ethernet10
+   description Endpoint
+   no shutdown
+   switchport access vlan 110
+   switchport mode access
+   switchport
 ```
 
 ## Port-Channel Interfaces
@@ -281,12 +289,14 @@ no ip routing vrf MGMT
 | VRF | Destination Prefix | Next Hop IP             | Exit interface      | Administrative Distance       | Tag               | Route Name                    | Metric         |
 | --- | ------------------ | ----------------------- | ------------------- | ----------------------------- | ----------------- | ----------------------------- | -------------- |
 | MGMT | 0.0.0.0/0 | 172.31.0.1 | - | 1 | - | - | - |
+| default | 10.1.0.0/16 | 10.1.100.100 | - | 1 | - | - | - |
 
 ### Static Routes Device Configuration
 
 ```eos
 !
 ip route vrf MGMT 0.0.0.0/0 172.31.0.1
+ip route 10.1.0.0/16 10.1.100.100
 ```
 
 ## Router ISIS
