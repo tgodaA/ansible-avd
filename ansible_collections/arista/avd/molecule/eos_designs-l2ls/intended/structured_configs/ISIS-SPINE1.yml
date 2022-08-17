@@ -70,7 +70,7 @@ router_isis:
   isis_af_defaults:
   - maximum-paths 4
   redistribute_routes:
-    source_protocol: static
+  - source_protocol: static
 vlans:
   110:
     tenant: L2LS_ISIS

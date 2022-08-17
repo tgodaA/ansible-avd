@@ -316,7 +316,7 @@ ip route 10.1.0.0/16 10.1.100.100
 
 | Route Type | Route-Map | Include Leaked |
 | ---------- | --------- | -------------- |
-| - | - | - |
+| static | - | - |
 
 ### ISIS Interfaces Summary
 
@@ -331,6 +331,7 @@ ip route 10.1.0.0/16 10.1.100.100
 router isis EVPN_UNDERLAY
    net 49.0001.0001.0000.0001.00
    is-type level-2
+   redistribute static
    router-id ipv4 192.168.255.1
    log-adjacency-changes
    !
